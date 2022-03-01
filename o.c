@@ -20,7 +20,6 @@ int logFunc(int n) {
 int sumAll(int* n, size_t size) {
 	int sum = 0;
 	for(int i = 0; i < size; i++){
-		printf("%d\n", i);
 		sum += n[i];
 	}
 	return sum;
@@ -38,12 +37,7 @@ void printMatrix(int *matrix, size_t m, size_t n) {
 
 //	O(2^n)
 int fib(int n) {
-	if(n == 0)
-		return 0;
-	if(n == 1)
-		return 0;
-	
-	return fib(n - 1) + fib(n - 2);
+	return (n > 1) ? fib(n - 1) + fib(n - 2) : n;
 }
 int main() {
 	
